@@ -21,15 +21,8 @@ void Music::Open(std::string file) {
 }
 
 void Music::Play(int times) {
-    printf("tentando RODAR MUSICA\n");
-    if (IsOpen()) {
-        Mix_PlayMusic(this->music, times);
-
-        /*printf("MUSICA ESTA CARREGADA\n");
-        if (Mix_PlayMusic(this->music, times) != 0)
-            printf("Error playing music: %s\n", SDL_GetError());*/
-    }
-    printf("CONSEGUIU RODAR MUSICA\n");
+    if (Mix_PlayMusic(this->music, times) != 0)
+        printf("Error playing music: %s\n", SDL_GetError());
 }
 
 void Music::Stop(int msToStop) {

@@ -69,10 +69,12 @@ SDL_Renderer* Game::GetRenderer() {
 }
 
 void Game::Run() {
+    printf("Jogo executando\n");
     while (not this->state->QuitRequested()) {
         this->state->Update(0.0);
         this->state->Render();
         SDL_RenderPresent(this->renderer);
         SDL_Delay(33);
     }
+    printf("Execucao finalizada.\n");
 }
