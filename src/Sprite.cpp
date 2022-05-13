@@ -1,7 +1,5 @@
 #include "../include/Sprite.h"
 #include "../include/Game.h"
-#include "SDL_image.h"
-#include <string>
 
 Sprite::Sprite() {
     this->texture = nullptr;

@@ -1,8 +1,4 @@
 #include "../include/Game.h"
-#include "SDL_image.h"
-#include "SDL_mixer.h"
-#include <string>
-#include <iostream>
 
 Game* Game::instance;
 
@@ -32,7 +28,6 @@ Game::Game(std::string title, int width, int height) {
     };
     Mix_AllocateChannels(32);
 
-    // crian
     this->window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0);
     if (this->window == nullptr) {
         printf("Error creating window");

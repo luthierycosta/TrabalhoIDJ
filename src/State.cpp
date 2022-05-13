@@ -1,11 +1,11 @@
 #include "../include/State.h"
-#include "SDL.h"
 
-State::State() {
-    this->bg = Sprite("./assets/img/ocean.jpg");
-    this->music = Music("./assets/audio/stageState.ogg");
-    this->music.Play(-1);
-    this->quitRequested = false;
+State::State():
+    bg("./assets/img/ocean.jpg"),
+    music("./assets/audio/stageState.ogg") {
+
+        this->music.Play(-1);
+        this->quitRequested = false;
 }
 
 void State::LoadAssets() {
